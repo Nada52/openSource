@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+</head>
+<body>
+    <!-- <div>Subject Name</div> -->
+    <section class="bg-light p-5">
+        <h3 class="pb-2" id="subjectTitle"></h3>
+        <div class="table-responsive" id="no-more-tables">
+            <table class="table bg-white" id="examsTable">
+                <thead class="bg-dark text-light">
+                    <tr>
+                        <th>Exam</th>
+                        <th>Estimated Time</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-title="Exam">Exam on chapter 1</td>
+                        <td data-title="Estimated Time">30 min</td>
+                        <td data-title="Start Exam"><button onclick="takeExam()">Start Exam</button></td>
+                    </tr>
+                    <tr>
+                        <td data-title="Exam">Exam on chapter 2</td>
+                        <td data-title="Estimated Time">30 min</td>
+                        <td data-title="Start Exam"><button onclick="takeExam()">Start Exam</button></td>
+                    </tr>
+                    <tr>
+                        <td data-title="Exam">Exam on chapter 3</td>
+                        <td data-title="Estimated Time">30 min</td>
+                        <td data-title="Start Exam"><button onclick="takeExam()">Start Exam</button></td>
+                    </tr>
+                    <tr>
+                        <td data-title="Exam">Final Exam</td>
+                        <td data-title="Estimated Time">45 min</td>
+                        <td data-title="Start Exam"><button onclick="takeExam()">Start Exam</button></td>
+                    </tr>
+                
+                    
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script>
+        function takeExam(){
+            location.href = 'ques.html';
+        }
+      
+        document.getElementById('subjectTitle').innerHTML = sessionStorage.getItem('subjectName');
+    </script>
+    <script src="subject.js"></script>
+</body>
+</html>
