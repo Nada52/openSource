@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <style>
+        @media only screen and (max-width:800px) {
+            #no-more-tables tbody,
+            #no-more-tables tr,
+            #no-more-tables td{
+                display: block;
+            }
+
+            #no-more-tables thead tr{
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            #no-more-tables td{
+                position: relative;
+                padding-left: 50%;
+                border: none;
+                border-bottom: 1px solid #eee;
+            }
+
+            #no-more-tables td:before{
+                content: attr(data-title);
+                position: absolute;
+                left: 6px;
+                font-weight: bold;
+            }
+
+            #no-more-tables tr{
+                border-bottom: 1px solid #ccc;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <div>Subject Name</div> -->
+    <section class="bg-light p-5">
+        <h3 class="pb-2">My Grades</h3>
+        <div class="table-responsive" id="no-more-tables">
+            <table class="table bg-white">
+                <thead class="bg-dark text-light">
+                    <tr>
+                        <th>Subject</th>
+                        <th>Exam</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Artificial Intelligence</td>
+                        <td data-title="Exam">Exam on chapter 1</td>
+                        <td>100</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Artificial Intelligence</td>
+                        <td data-title="Exam">Exam on chapter 1</td>
+                        <td>100</td>
+                    </tr>
+                    
+
+                    <tr>
+                        <td>Artificial Intelligence</td>
+                        <td data-title="Exam">Exam on chapter 1</td>
+                        <td>100</td>
+                    </tr>
+                    
+
+                    <tr>
+                        <td>Artificial Intelligence</td>
+                        <td data-title="Exam">Exam on chapter 1</td>
+                        <td>100</td>
+                    </tr>
+                    
+                
+                    
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+</html>
